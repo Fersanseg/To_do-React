@@ -1,0 +1,97 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: "Fira Sans", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.todo {
+    background-color: silver;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 5rem auto;
+    width: 40vw;
+    min-height: 30rem;
+
+    &__form {
+        display: flex;
+        height: 4rem;
+        
+        &--input {
+            flex: 4 1 auto;
+            font-size: 2rem;
+            padding-left: 2rem;
+        }
+
+        &--button {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__counter {
+        align-self: flex-end;
+        margin: 1rem 3rem 0;
+    }
+
+    &__taskList {
+        flex-grow: 1;
+        margin: 2rem 4rem 4rem;
+        margin-left: 4rem;
+
+        & li {
+            margin: 0.4rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        &--closeButton {
+            color: red;
+            background-color: rgb(153, 153, 153);
+            text-transform: uppercase;
+            cursor: pointer;
+            border: 1px solid black;
+            padding: 0.4rem;
+            margin-right: 1rem;
+        }
+
+        &--task {
+            font-size: 2rem;
+        }
+    }
+
+    &__modeButtons {
+        display: flex;
+        justify-content: space-between;
+        height: 4rem;
+        margin: 0 4rem;
+        margin-bottom: 2rem;
+        & > * {
+            flex: 0 1 20%;
+        }
+    }
+
+    &__closeAll {
+        height: 4rem;
+        margin: 0 4rem 2rem;
+    }
+}
+
+.complete {
+    text-decoration: line-through;
+    color: rgba(128, 128, 128, 0.651);
+}
+
+.incomplete {
+    
+}
